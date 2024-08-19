@@ -10,7 +10,7 @@ public class Cliente implements ClienteAdmin{
     private static String nome;
     private static int id;
 
-    //Métodos ClienteAdmin
+    //Métodos interface ClienteAdmin
     @Override
     public void mudarNome(Cliente cliente, String nome){
         cliente.setNome(nome);

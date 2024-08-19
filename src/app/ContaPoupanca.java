@@ -12,4 +12,16 @@ public class ContaPoupanca extends Conta{
         System.out.println("Extrato conta poupança");
         super.dadosConta();
     }
+    public double jurosCompostos(int anos, double valor){
+        if(super.saldo >= valor){
+            for(int i = 0; i < anos; i++){
+                valor += valor * (super.juros/100);
+            }
+            super.depositar(valor);
+        }
+        else{
+            System.out.println("Saldo insuficiente para aplicação");
+        }
+        return valor;
+    }
 }
